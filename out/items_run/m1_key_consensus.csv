@@ -1,0 +1,2 @@
+item_id,format,n_solvers,n_match,status,accepted,ambiguous,ambiguity_rule,answer__gemini/gemini-3.5-flash,match_reason__gemini/gemini-3.5-flash,answer__gemini/gemini-3-flash-preview,match_reason__gemini/gemini-3-flash-preview,answer__gemini/gemini-3.6-flash,match_reason__gemini/gemini-3.6-flash,most_common_other_answer,item_score
+core-b3-numeric-7ed8187df3,numeric,3,0,solvers_agree_on_other,False,False,,2503.5 W,wrong_value,2503.5 W,wrong_value,2503.53 W,wrong_value,2503.5,0.0

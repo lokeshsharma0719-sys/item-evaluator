@@ -1,0 +1,11 @@
+.env
+.venv/
+.cache/
+out/*
+!out/items_run/
+out/items_run/m2_*
+out/items_run/raw/m2_*
+__pycache__/
+*.egg-info/
+.pytest_cache/
+*.log

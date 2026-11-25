@@ -1,0 +1,8 @@
+severity,item_id,format,status,ambiguity_rule,key,most_common_other_answer,answer__gemini/gemini-3.5-flash,working__gemini/gemini-3.5-flash,ambiguity_reason__gemini/gemini-3.5-flash,answer__gemini/gemini-3-flash-preview,working__gemini/gemini-3-flash-preview,ambiguity_reason__gemini/gemini-3-flash-preview,answer__gemini/gemini-3.6-flash,working__gemini/gemini-3.6-flash,ambiguity_reason__gemini/gemini-3.6-flash
+5,core-b3-numeric-7ed8187df3,numeric,solvers_agree_on_other,,1712 W,2503.5,2503.5 W,"A = pi * D * L = pi * 0.10 * 5.0 = 0.5 * pi ≈ 1.5708 m^2.
+Q_conv = h * A * (T_s - T_inf) = 8.0 * (0.5 * pi) * (400 - 300) = 400 * pi ≈ 1256.64 W.
+Q_rad = eps * sigma * A * (T_s^4 - T_surr^4) = 0.80 * 5.67e-8 * (0.5 * pi) * (400^4 - 300^4) = 396.9 * pi ≈ 1246.90 W.
+Q_total = Q_conv + Q_rad = 796.9 * pi ≈ 2503.54 W.",,2503.5 W,Area A = pi * 0.1 * 5 = 1.5708 m^2. Convection loss Q_conv = h * A * (T_s - T_inf) = 8 * 1.5708 * 100 = 1256.6 W. Radiation loss Q_rad = epsilon * sigma * A * (T_s^4 - T_surr^4) = 0.8 * 5.67e-8 * 1.5708 * (400^4 - 300^4) = 1246.9 W. Total loss Q_total = 1256.6 + 1246.9 = 2503.5 W.,,2503.53 W,"Surface Area A = pi * 0.10 m * 5.0 m = 0.5*pi m^2 ≈ 1.5708 m^2.
+Convection heat loss q_conv = h * A * (T_s - T_inf) = 8.0 * (0.5*pi) * (400 - 300) = 400*pi W ≈ 1256.64 W.
+Radiation heat loss q_rad = eps * sigma * A * (T_s^4 - T_surr^4) = 0.80 * 5.67e-8 * (0.5*pi) * (400^4 - 300^4) = 396.9*pi W ≈ 1246.90 W.
+Total heat loss q_total = q_conv + q_rad = 796.9*pi W ≈ 2503.53 W.",

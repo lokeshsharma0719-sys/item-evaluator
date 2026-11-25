@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "item_metrics"
+version = "0.1.0"
+description = "Item quality metrics (key consensus, judge mutation accuracy, blind topic classification) for assessment item CSVs."
+requires-python = ">=3.11"
+dependencies = [
+  "litellm>=1.40",
+  "pydantic>=2",
+  "pandas>=2",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pyyaml>=6",
+  "pint>=0.23",
+  "json-repair>=0.25",
+  "tenacity>=8",
+  "tqdm>=4.66",
+  "python-dotenv>=1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[tool.setuptools]
+packages = ["item_metrics", "item_metrics.metrics"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

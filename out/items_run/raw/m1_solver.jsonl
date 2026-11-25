@@ -1,0 +1,156 @@
+{"item_id": "core-b3-numeric-7ed8187df3", "model": "gemini/gemini-3.5-flash", "status": "ok", "parsed": {"answer": 2503.5, "unit": "W", "stage_answers": {"S1": {"value": "Convection and radiation; total heat loss is the sum of both modes: Q_total = Q_conv + Q_rad.", "unit": ""}, "S2": {"value": "A = pi * D * L = 0.5 * pi ≈ 1.5708 m^2. Q_conv = h * A * (T_s - T_inf) and Q_rad = eps * sigma * A * (T_s^4 - T_surr^4).", "unit": ""}, "S3": {"value": "Q_conv = 1256.6 W, Q_rad = 1246.9 W.", "unit": ""}, "S4": {"value": "Q_total = 2503.5 W.", "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "A = pi * D * L = pi * 0.10 * 5.0 = 0.5 * pi ≈ 1.5708 m^2.\nQ_conv = h * A * (T_s - T_inf) = 8.0 * (0.5 * pi) * (400 - 300) = 400 * pi ≈ 1256.64 W.\nQ_rad = eps * sigma * A * (T_s^4 - T_surr^4) = 0.80 * 5.67e-8 * (0.5 * pi) * (400^4 - 300^4) = 396.9 * pi ≈ 1246.90 W.\nQ_total = Q_conv + Q_rad = 796.9 * pi ≈ 2503.54 W."}, "label_map": {}}
+{"item_id": "core-b3-numeric-7ed8187df3", "model": "gemini/gemini-3-flash-preview", "status": "ok", "parsed": {"answer": 2503.5, "unit": "W", "stage_answers": {"S1": {"value": "The two modes are natural convection and net radiation. They are combined by adding the individual heat loss rates: Q_total = Q_conv + Q_rad.", "unit": ""}, "S2": {"value": "Surface area A = pi * D * L = pi * 0.10 * 5.0 = 0.5*pi m^2. Rate equations: Q_conv = h * A * (T_s - T_inf) and Q_rad = epsilon * sigma * A * (T_s^4 - T_surr^4).", "unit": ""}, "S3": {"value": "Q_conv = 8.0 * (0.5*pi) * (400 - 300) = 400*pi = 1256.6 W. Q_rad = 0.80 * 5.67e-8 * (0.5*pi) * (400^4 - 300^4) = 396.9*pi = 1246.9 W.", "unit": ""}, "S4": {"value": "Q_total = 1256.6 + 1246.9 = 2503.5 W.", "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "Area A = pi * 0.1 * 5 = 1.5708 m^2. Convection loss Q_conv = h * A * (T_s - T_inf) = 8 * 1.5708 * 100 = 1256.6 W. Radiation loss Q_rad = epsilon * sigma * A * (T_s^4 - T_surr^4) = 0.8 * 5.67e-8 * 1.5708 * (400^4 - 300^4) = 1246.9 W. Total loss Q_total = 1256.6 + 1246.9 = 2503.5 W."}, "label_map": {}}
+{"item_id": "core-b3-numeric-7ed8187df3", "model": "gemini/gemini-3.6-flash", "status": "ok", "parsed": {"answer": 2503.53, "unit": "W", "stage_answers": {"S1": {"value": "Natural convection and thermal radiation act in parallel at the surface; total heat loss is the sum of both modes: q_total = q_conv + q_rad.", "unit": ""}, "S2": {"value": "Area A = pi * D * L = 0.5*pi ≈ 1.5708 m^2. q_conv = h * A * (T_s - T_inf); q_rad = eps * sigma * A * (T_s^4 - T_surr^4).", "unit": ""}, "S3": {"value": "q_conv = 1256.64 W, q_rad = 1246.90 W.", "unit": ""}, "S4": {"value": "Total heat loss = 2503.53 W.", "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "Surface Area A = pi * 0.10 m * 5.0 m = 0.5*pi m^2 ≈ 1.5708 m^2.\nConvection heat loss q_conv = h * A * (T_s - T_inf) = 8.0 * (0.5*pi) * (400 - 300) = 400*pi W ≈ 1256.64 W.\nRadiation heat loss q_rad = eps * sigma * A * (T_s^4 - T_surr^4) = 0.80 * 5.67e-8 * (0.5*pi) * (400^4 - 300^4) = 396.9*pi W ≈ 1246.90 W.\nTotal heat loss q_total = q_conv + q_rad = 796.9*pi W ≈ 2503.53 W."}, "label_map": {}}
+{"item_id": "core-b3-numeric-d5cf432a2e", "model": "gemini/gemini-3.5-flash", "status": "ok", "parsed": {"answer": 137050, "unit": "W/m^2", "stage_answers": {"S1": {"value": "Nucleate pool boiling, Rohsenow correlation", "unit": ""}, "S2": {"value": "399.3", "unit": ""}, "S3": {"value": "0.8169", "unit": ""}, "S4": {"value": "137050", "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "1. Buoyancy factor: [9.81 * (957.9 - 0.5955) / 58.9e-3]^0.5 = 399.30 1/m.\n2. Dimensionless ratio: (4217 * 10) / (0.0130 * 2.257e6 * 1.76^1.0) = 0.81686.\n3. Heat flux q'' = (279e-6 * 2.257e6) * 399.30 * (0.81686)^3 = 629.703 * 399.30 * 0.54505 = 137050 W/m^2."}, "label_map": {}}
+{"item_id": "core-b3-numeric-d5cf432a2e", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-d5cf432a2e", "model": "gemini/gemini-3.6-flash", "status": "ok", "parsed": {"answer": 136926, "unit": "W/m^2", "stage_answers": {"S1": {"value": "Nucleate pool boiling, Rohsenow correlation", "unit": ""}, "S2": {"value": "399.3 m^-1", "unit": ""}, "S3": {"value": "0.8166", "unit": ""}, "S4": {"value": "136926 W/m^2", "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "1. Buoyancy term: [g(rho_l - rho_v)/sigma]^0.5 = [9.81 * (957.9 - 0.5955) / 58.9e-3]^0.5 = 399.30 m^-1.\n2. Dimensionless ratio: [c_p,l * DeltaT_e / (C_sf * h_fg * Pr_l^n)] = [4217 * 10 / (0.0130 * 2257e3 * 1.76)] = 0.81661.\n3. Pre-factor: mu_l * h_fg = 279e-6 * 2257e3 = 629.703 W/m.\n4. Heat flux: q'' = 629.703 * 399.30 * (0.81661)^3 = 136926 W/m^2."}, "label_map": {}}
+{"item_id": "core-b3-numeric-277c10be4d", "model": "gemini/gemini-3.5-flash", "status": "ok", "parsed": {"answer": 63523.4, "unit": "W", "stage_answers": {"S1": {"value": "Nusselt laminar film condensation model; DeltaT = 20 K", "unit": ""}, "S2": {"value": 2314201.6, "unit": ""}, "S3": {"value": 6352.34, "unit": ""}, "S4": {"value": 63523.4, "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "DeltaT = 100 - 80 = 20 K.\nh'_fg = 2257000 + 0.68 * 4206 * 20 = 2314201.6 J/kg.\nh = 0.943 * [9.81 * (965)^2 * (0.675)^3 * 2314201.6 / (315e-6 * 20 * 0.5)]^(1/4) = 6352.34 W/(m^2.K).\nArea A = 0.5 * 1.0 = 0.5 m^2.\nQ = h * A * DeltaT = 6352.34 * 0.5 * 20 = 63523.4 W."}, "label_map": {}}
+{"item_id": "core-b3-numeric-277c10be4d", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-277c10be4d", "model": "gemini/gemini-3.6-flash", "status": "ok", "parsed": {"answer": 63568, "unit": "W", "stage_answers": {"S1": {"value": "Nusselt film condensation, DeltaT = 20 K", "unit": ""}, "S2": {"value": "2314201.6", "unit": ""}, "S3": {"value": "6356.8", "unit": ""}, "S4": {"value": "63568", "unit": ""}}, "option_verdicts": [], "ambiguous": false, "ambiguity_reason": "", "working": "DeltaT = 100 - 80 = 20 K\nh'_fg = 2257e3 + 0.68 * 4206 * 20 = 2314201.6 J/kg\nh = 0.943 * (9.81 * 965^2 * 0.675^3 * 2314201.6 / (315e-6 * 20 * 0.5))^(1/4) = 6356.80 W/m^2.K\nQ = h * A * DeltaT = 6356.80 * (0.5 * 1.0) * 20 = 63568 W"}, "label_map": {}}
+{"item_id": "core-b3-staged-7c4317d9d1", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-7c4317d9d1", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-7c4317d9d1", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-80fb61aabd", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-80fb61aabd", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-80fb61aabd", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-bad330c393", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-bad330c393", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-bad330c393", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-1bfa45eb27", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-1bfa45eb27", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-1bfa45eb27", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-20c7ea120b", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-20c7ea120b", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-20c7ea120b", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-6ee1cade23", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-6ee1cade23", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-6ee1cade23", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-084ecec439", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-084ecec439", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-084ecec439", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-9dcb82a97c", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-9dcb82a97c", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-9dcb82a97c", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-cac29fe595", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-cac29fe595", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-staged-cac29fe595", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-209db6bb33", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-209db6bb33", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-209db6bb33", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-7a36e80491", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-7a36e80491", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-7a36e80491", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-d0d2010a2b", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-d0d2010a2b", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b3-numeric-d0d2010a2b", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-09e67c625f", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-09e67c625f", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-09e67c625f", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-34718c88c6", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-34718c88c6", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-34718c88c6", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-af7583ee04", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-af7583ee04", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-af7583ee04", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-a15b5f07a4", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-a15b5f07a4", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-a15b5f07a4", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-57c9764137", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-57c9764137", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b3-numeric-57c9764137", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b1-mcq_4-062a37ddee", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-062a37ddee", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "B", "D": "A"}}
+{"item_id": "core-b1-mcq_4-062a37ddee", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"item_id": "core-b1-mcq_4-66e0324a04", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"item_id": "core-b1-mcq_4-66e0324a04", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "C", "C": "D", "D": "B"}}
+{"item_id": "core-b1-mcq_4-66e0324a04", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-f0256c64d4", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-f0256c64d4", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "core-b1-mcq_4-f0256c64d4", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"item_id": "core-b1-mcq_4-0c4ed0d9f8", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"item_id": "core-b1-mcq_4-0c4ed0d9f8", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"item_id": "core-b1-mcq_4-0c4ed0d9f8", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"item_id": "core-b1-mcq_4-78c2a5deac", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"item_id": "core-b1-mcq_4-78c2a5deac", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-78c2a5deac", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"item_id": "core-b1-mcq_4-91cdc4848e", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "core-b1-mcq_4-91cdc4848e", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"item_id": "core-b1-mcq_4-91cdc4848e", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "A", "C": "B", "D": "D"}}
+{"item_id": "core-b1-mcq_4-9687299e41", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"item_id": "core-b1-mcq_4-9687299e41", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "C", "C": "B", "D": "D"}}
+{"item_id": "core-b1-mcq_4-9687299e41", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "C", "C": "B", "D": "D"}}
+{"item_id": "core-b1-mcq_4-3628123566", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"item_id": "core-b1-mcq_4-3628123566", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"item_id": "core-b1-mcq_4-3628123566", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"item_id": "core-b1-mcq_4-84257d667e", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-84257d667e", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"item_id": "core-b1-mcq_4-84257d667e", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"item_id": "core-b1-mcq_4-70332f9ee9", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-70332f9ee9", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"item_id": "core-b1-mcq_4-70332f9ee9", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"item_id": "core-b1-mcq_4-556c4972a3", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"item_id": "core-b1-mcq_4-556c4972a3", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"item_id": "core-b1-mcq_4-556c4972a3", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "B", "D": "C"}}
+{"item_id": "core-b1-mcq_4-28985e3b12", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "A", "D": "D"}}
+{"item_id": "core-b1-mcq_4-28985e3b12", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "B", "C": "D", "D": "A"}}
+{"item_id": "core-b1-mcq_4-28985e3b12", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b1-mcq_4-e0e2383a04", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"item_id": "core-b1-mcq_4-e0e2383a04", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "core-b1-mcq_4-e0e2383a04", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"item_id": "core-b1-mcq_4-d4ecaa9dd1", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "core-b1-mcq_4-d4ecaa9dd1", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "A", "C": "B", "D": "D"}}
+{"item_id": "core-b1-mcq_4-d4ecaa9dd1", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "comm-b2-mcq_4-461bfa5c6d", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"item_id": "comm-b2-mcq_4-461bfa5c6d", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "comm-b2-mcq_4-461bfa5c6d", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"item_id": "comm-b2-mcq_4-a0d3b516a8", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "B", "D": "A"}}
+{"item_id": "comm-b2-mcq_4-a0d3b516a8", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "C", "C": "D", "D": "B"}}
+{"item_id": "comm-b2-mcq_4-a0d3b516a8", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"item_id": "comm-b2-mcq_4-e6d0c5d38e", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "A", "D": "C"}}
+{"item_id": "comm-b2-mcq_4-e6d0c5d38e", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"item_id": "comm-b2-mcq_4-e6d0c5d38e", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"item_id": "core-b2-numeric-3d6197c9c3", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b2-numeric-3d6197c9c3", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b2-numeric-3d6197c9c3", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "core-b2-mcq_4-460c4582cc", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"item_id": "core-b2-mcq_4-460c4582cc", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"item_id": "core-b2-mcq_4-460c4582cc", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "A", "D": "B"}}
+{"item_id": "biz-b2-mcq_4-a7f1101a74", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"item_id": "biz-b2-mcq_4-a7f1101a74", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"item_id": "biz-b2-mcq_4-a7f1101a74", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"item_id": "core-b2-mcq_4-9b3d922326", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "core-b2-mcq_4-9b3d922326", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "C", "C": "B", "D": "A"}}
+{"item_id": "core-b2-mcq_4-9b3d922326", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "B", "D": "C"}}
+{"item_id": "core-b2-mcq_4-b99d47ac84", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"item_id": "core-b2-mcq_4-b99d47ac84", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"item_id": "core-b2-mcq_4-b99d47ac84", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"item_id": "core-b2-mcq_4-ee639c7649", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"item_id": "core-b2-mcq_4-ee639c7649", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"item_id": "core-b2-mcq_4-ee639c7649", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "A", "D": "C"}}
+{"item_id": "math-b2-mcq_4-e46658303c", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "D", "D": "C"}}
+{"item_id": "math-b2-mcq_4-e46658303c", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"item_id": "math-b2-mcq_4-e46658303c", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "C", "C": "A", "D": "B"}}
+{"item_id": "core-b2-mcq_4-392c9887e7", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b2-mcq_4-392c9887e7", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"item_id": "core-b2-mcq_4-392c9887e7", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"item_id": "core-b2-mcq_4-4c62f51a2f", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b2-mcq_4-4c62f51a2f", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "A", "C": "C", "D": "B"}}
+{"item_id": "core-b2-mcq_4-4c62f51a2f", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "A", "C": "C", "D": "D"}}
+{"item_id": "core-b2-mcq_4-7233232417", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "D", "C": "B", "D": "A"}}
+{"item_id": "core-b2-mcq_4-7233232417", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "D", "C": "C", "D": "B"}}
+{"item_id": "core-b2-mcq_4-7233232417", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "D", "C": "C", "D": "A"}}
+{"item_id": "core-b2-mcq_4-9304decc35", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "B", "C": "C", "D": "D"}}
+{"item_id": "core-b2-mcq_4-9304decc35", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "A", "B": "D", "C": "B", "D": "C"}}
+{"item_id": "core-b2-mcq_4-9304decc35", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "C", "C": "D", "D": "A"}}
+{"item_id": "core-b2-mcq_4-feb80dcd5a", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {"A": "B", "B": "A", "C": "D", "D": "C"}}
+{"item_id": "core-b2-mcq_4-feb80dcd5a", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {"A": "C", "B": "B", "C": "A", "D": "D"}}
+{"item_id": "core-b2-mcq_4-feb80dcd5a", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {"A": "D", "B": "B", "C": "C", "D": "A"}}
+{"item_id": "math-b2-numeric-2477738af8", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-2477738af8", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-2477738af8", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-5b036eb9c7", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-5b036eb9c7", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-5b036eb9c7", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-7af3afad47", "model": "gemini/gemini-3.5-flash", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-7af3afad47", "model": "gemini/gemini-3-flash-preview", "status": "error", "parsed": null, "label_map": {}}
+{"item_id": "math-b2-numeric-7af3afad47", "model": "gemini/gemini-3.6-flash", "status": "error", "parsed": null, "label_map": {}}

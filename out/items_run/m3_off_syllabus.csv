@@ -1,0 +1,1 @@
+item_id,course_code,format,bloom_level,assigned_topic,K,top1__gemini/gemini-3.5-flash,rank_assigned__gemini/gemini-3.5-flash,top1__gemini/gemini-3-flash-preview,rank_assigned__gemini/gemini-3-flash-preview,majority,correct,topic_named_in_stem,low_topic_count,item_score

@@ -1,0 +1,38 @@
+# Run config for data/items_for_metrics.csv: Gemini only (4 keys), models chosen from a probe of what the keys serve.
+generator_model: null
+allow_single_vendor: true
+
+models:
+  solvers:
+    - gemini/gemini-3.5-flash
+    - gemini/gemini-3-flash-preview
+    - gemini/gemini-3.6-flash          # 2.5-flash free-tier quota was used up on 2026-11-26; rejects temperature
+  verifier: []
+  judges:
+    - gemini/gemini-3.5-flash
+    - gemini/gemini-3-flash-preview
+  mutator: gemini/gemini-2.5-flash
+  mutation_validator: gemini/gemini-3.6-flash   # differs from mutator and judges; rejects temperature
+  topic_classifiers:
+    - gemini/gemini-3.5-flash
+    - gemini/gemini-3-flash-preview
+  embedding: null
+
+llm:
+  temperature: 0
+  max_concurrency: 4
+  timeout_s: 180
+  max_retries: 6
+  retry_max_wait_s: 65
+  key_rotation: round_robin
+  key_cooldown_s: 5
+  json_mode: true
+  cache_dir: .cache/llm
+  max_cost_usd: 10.0
+
+seed: 1234
+
+judge_mutation:
+  judge_runs: 2
+  paraphrase_controls: 2
+  require_human_validation: false

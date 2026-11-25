@@ -1,0 +1,249 @@
+{
+  "started_at": "2026-11-25T20:40:09+00:00",
+  "finished_at": "2026-11-25T20:59:37+00:00",
+  "input_file": "data/items_for_metrics.csv",
+  "input_sha256": "66e19715b9b44045d90a1b87680afdd522b30b2e62cab99ebe5870e7aaf0077f",
+  "rows": {
+    "read": 56,
+    "valid": 56,
+    "invalid": 0,
+    "used": 56,
+    "limit": null,
+    "tolerance_capped": []
+  },
+  "metrics": [
+    "m1",
+    "m3"
+  ],
+  "config": {
+    "generator_model": null,
+    "allow_single_vendor": true,
+    "models": {
+      "solvers": [
+        "gemini/gemini-3.5-flash",
+        "gemini/gemini-3-flash-preview",
+        "gemini/gemini-3.6-flash"
+      ],
+      "verifier": [],
+      "judges": [
+        "gemini/gemini-3.5-flash",
+        "gemini/gemini-3-flash-preview"
+      ],
+      "mutator": "gemini/gemini-2.5-flash",
+      "mutation_validator": "gemini/gemini-3.6-flash",
+      "topic_classifiers": [
+        "gemini/gemini-3.5-flash",
+        "gemini/gemini-3-flash-preview"
+      ],
+      "embedding": null
+    },
+    "llm": {
+      "temperature": 0.0,
+      "max_concurrency": 4,
+      "timeout_s": 180.0,
+      "max_retries": 6,
+      "retry_max_wait_s": 65.0,
+      "key_rotation": "round_robin",
+      "key_cooldown_s": 5.0,
+      "json_mode": true,
+      "cache_dir": ".cache/llm",
+      "max_cost_usd": 10.0
+    },
+    "seed": 1234,
+    "numeric": {
+      "default_tolerance": 0.02,
+      "tolerance_cap": 0.02,
+      "planted_perturbations": [
+        0.03,
+        0.05,
+        0.1
+      ]
+    },
+    "key_consensus": {
+      "gate_rule": "all",
+      "shuffle_options": true
+    },
+    "judge_mutation": {
+      "judge_runs": 2,
+      "paraphrase_controls": 2,
+      "require_human_validation": false
+    },
+    "topic_blind": {
+      "top_k": 3,
+      "min_topics_warning": 4
+    },
+    "thresholds": {
+      "key_consensus_rate": 0.9,
+      "planted_error_recall": 0.9,
+      "ambiguity_rate_max": 0.05,
+      "judge_balanced_accuracy": 0.85,
+      "judge_sensitivity": 0.8,
+      "topic_accuracy": 0.8
+    },
+    "normalised": {
+      "floor": 0.01,
+      "m1_weights": {
+        "kcr": 0.5,
+        "per": 0.25,
+        "no_ambiguity": 0.25,
+        "verifier": 0.15
+      },
+      "m2_weights": {
+        "balanced_accuracy": 0.7,
+        "score_accuracy": 0.3
+      },
+      "m3_weights": {
+        "chance_adj_accuracy": 0.7,
+        "chance_adj_mrr": 0.3
+      }
+    },
+    "column_map": {}
+  },
+  "models": {
+    "generator_model": null,
+    "solvers": [
+      "gemini/gemini-3.5-flash",
+      "gemini/gemini-3-flash-preview",
+      "gemini/gemini-3.6-flash"
+    ],
+    "verifier": [],
+    "judges": [
+      "gemini/gemini-3.5-flash",
+      "gemini/gemini-3-flash-preview"
+    ],
+    "mutator": "gemini/gemini-2.5-flash",
+    "mutation_validator": "gemini/gemini-3.6-flash",
+    "topic_classifiers": [
+      "gemini/gemini-3.5-flash",
+      "gemini/gemini-3-flash-preview"
+    ],
+    "embedding": null
+  },
+  "prompts": {
+    "SOLVER": {
+      "version": "solver-v1",
+      "sha256": "72f1e44a5c48a9cbfeb5d90ed64519dbfde30f11ab4b408cfa875ae74ca2b838"
+    },
+    "VERIFIER": {
+      "version": "verifier-v1",
+      "sha256": "9d3f63108d41bcd0d94f4dafa640f1fc7fccba957182f8bc4c84829b3ced65c9"
+    },
+    "REFERENCE_WRITER": {
+      "version": "reference-v1",
+      "sha256": "bba32705e4923a320c8420b5ee48aca9007c2bb52e180269a5091f2cfd51fa84"
+    },
+    "MUTATOR_CRITERION": {
+      "version": "mutator-criterion-v1",
+      "sha256": "6a78244209bed2ea7b6a68de6d9524ac028ff26a9f03f910255400a0cae30dfc"
+    },
+    "MUTATOR_PARAPHRASE": {
+      "version": "mutator-paraphrase-v1",
+      "sha256": "b535a7fddea41cad4ec7e85c4e7cbc5eda09a651e5c3e20ef4e50e50bd51a30c"
+    },
+    "MUTATION_VALIDATOR": {
+      "version": "mutation-validator-v1",
+      "sha256": "def387e6c4d3af89eeaf3c176706865aa4444c4d79b798efc6379e58e2dc5a26"
+    },
+    "PARAPHRASE_VALIDATOR": {
+      "version": "paraphrase-validator-v1",
+      "sha256": "a3007a646e52644a28a69adbebfdaca75dec122917d5c5b71133c0cc82892b03"
+    },
+    "JUDGE": {
+      "version": "judge-v1",
+      "sha256": "a5f41064a285198bcec366c753f28c1c048634d283f5ab8b2cafa77a6b4a20d5"
+    },
+    "TOPIC_CLASSIFIER": {
+      "version": "topic-classifier-v1",
+      "sha256": "243fca3a1f99559889855cb83022f40a3e29ca03df11a7b651679429fc82c7f0"
+    }
+  },
+  "libraries": {
+    "python": "3.13.14",
+    "litellm": "1.111.0",
+    "pydantic": "2.14.4",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "pint": "0.26.2",
+    "json-repair": "0.64.9",
+    "tenacity": "9.2.1"
+  },
+  "seed": 1234,
+  "llm": {
+    "network_calls": 4,
+    "cache_hits": 115,
+    "parse_failures": 149,
+    "cost_unknown_calls": 0,
+    "total_cost_usd": 0.034971,
+    "cache_used": true,
+    "api_keys": {
+      "gemini": {
+        "keys": 4,
+        "mode": "round_robin",
+        "per_key": [
+          {
+            "number": 1,
+            "calls": 4,
+            "rate_limits": 0,
+            "failures": 3,
+            "disabled": false,
+            "reason": "",
+            "models_unavailable": {
+              "gemini/gemini-3-flash-preview": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.5-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.6-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan "
+            }
+          },
+          {
+            "number": 2,
+            "calls": 8,
+            "rate_limits": 0,
+            "failures": 4,
+            "disabled": false,
+            "reason": "",
+            "models_unavailable": {
+              "gemini/gemini-3-flash-preview": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.5-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.6-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan "
+            }
+          },
+          {
+            "number": 3,
+            "calls": 4,
+            "rate_limits": 0,
+            "failures": 4,
+            "disabled": false,
+            "reason": "",
+            "models_unavailable": {
+              "gemini/gemini-3-flash-preview": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.5-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.6-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan "
+            }
+          },
+          {
+            "number": 4,
+            "calls": 3,
+            "rate_limits": 0,
+            "failures": 3,
+            "disabled": false,
+            "reason": "",
+            "models_unavailable": {
+              "gemini/gemini-3-flash-preview": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.5-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan ",
+              "gemini/gemini-3.6-flash": "RateLimitError: litellm.RateLimitError: litellm.RateLimitError: geminiException - { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan "
+            }
+          }
+        ]
+      }
+    },
+    "models_without_temperature": [
+      "gemini/gemini-3.6-flash"
+    ]
+  },
+  "budget_stopped": false,
+  "warnings": [
+    "solvers: all models share one vendor (google); errors may be correlated",
+    "topic_classifiers: all models share one vendor (google); errors may be correlated"
+  ],
+  "single_vendor": true
+}

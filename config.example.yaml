@@ -1,0 +1,71 @@
+# Model ids are placeholders. Supported forms (all calls go through LiteLLM):
+#   openrouter/<vendor>/<model>   key: OPENROUTER_API_KEY
+#   gemini/<model>                key: GEMINI_API_KEY (or GOOGLE_API_KEY); vendor = google
+# Every role with several models must span >= 2 vendors. Mixing gemini/ and openrouter/ models satisfies this.
+# For a Gemini-only setup see config.gemini.example.yaml.
+generator_model: null            # the model that wrote the items, if known; excluded from checker roles
+allow_single_vendor: false       # true turns the 2-vendor rule into a warning (recorded in the report)
+
+models:
+  solvers:                       # M1: independent blind solvers (>= 3 recommended, >= 2 vendors)
+    - openrouter/<vendor-a>/<model>
+    - openrouter/<vendor-b>/<model>
+    - openrouter/<vendor-c>/<model>
+  verifier: []                   # M1 optional key-visible verification; empty = off
+  judges:                        # M2: judges under test (each scored separately)
+    - openrouter/<vendor-a>/<model>
+    - openrouter/<vendor-b>/<model>
+  mutator: openrouter/<vendor-c>/<model>             # M2: writes the mutated answers
+  mutation_validator: openrouter/<vendor-d>/<model>  # M2: must differ from mutator AND every judge
+  topic_classifiers:             # M3 (>= 2, >= 2 vendors)
+    - openrouter/<vendor-a>/<model>
+    - openrouter/<vendor-b>/<model>
+  embedding: null                # M3 optional embedding rank; null = off
+
+llm:
+  temperature: 0
+  max_concurrency: 8
+  timeout_s: 120
+  max_retries: 4                 # exponential backoff on 429/5xx/timeouts
+  retry_max_wait_s: 30           # cap on one backoff wait
+  key_rotation: failover         # with several keys per provider: failover | round_robin
+  key_cooldown_s: 5              # first rest for a rate-limited key; doubles up to retry_max_wait_s
+  json_mode: true                # send response_format={"type":"json_object"} when the model supports it
+  cache_dir: .cache/llm
+  max_cost_usd: 10.0             # stop scheduling new calls once spent cost reaches this
+
+seed: 1234
+
+numeric:
+  default_tolerance: 0.02
+  tolerance_cap: 0.02
+  planted_perturbations: [0.03, 0.05, 0.10]   # relative, applied as +/-
+
+key_consensus:
+  gate_rule: all                 # all | majority
+  shuffle_options: true
+
+judge_mutation:
+  judge_runs: 2
+  paraphrase_controls: 2
+  require_human_validation: false
+
+topic_blind:
+  top_k: 3
+  min_topics_warning: 4
+
+thresholds:                      # only used to colour flags in the report
+  key_consensus_rate: 0.90
+  planted_error_recall: 0.90
+  ambiguity_rate_max: 0.05
+  judge_balanced_accuracy: 0.85
+  judge_sensitivity: 0.80
+  topic_accuracy: 0.80
+
+normalised:
+  floor: 0.01
+  m1_weights: {kcr: 0.50, per: 0.25, no_ambiguity: 0.25, verifier: 0.15}   # verifier used only if on; rescaled
+  m2_weights: {balanced_accuracy: 0.70, score_accuracy: 0.30}
+  m3_weights: {chance_adj_accuracy: 0.70, chance_adj_mrr: 0.30}
+
+column_map: {}
